@@ -28,7 +28,7 @@
         {{{body}}}
 
         
-    <a href="#" class="btn btn-primary voltar-ao-topo"><span><i class="fa fa-arrow-up"></i></span></a>
+    <a href="#" class="btn btn-primary voltar-ao-topo" style="background: #1E90FF;"><span><i class="fa fa-arrow-up"></i></span></a>
     </div>
 
 <!-- Footer -->
@@ -95,6 +95,7 @@
       $('textarea placeholder').css('color','white')
       $('textarea').css('color','white')
       $('table').css('color','white')
+      $('.voltar-ao-topo').css('background', 'black')
     }
 
     if(!tipo.checked){
@@ -104,6 +105,7 @@
       $('textarea placeholder').css('color','rgba(0, 0, 0, 0.7)')
       $('textarea').css('color','black')
       $('table').css('color','black')
+      $('.voltar-ao-topo').css('background', '#1E90FF')
     }
   })
     </script>
