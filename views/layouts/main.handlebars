@@ -85,6 +85,27 @@
                 $('html, body').animate({scrollTop: 0}, 300);
             })
         });
+    
+    $('#chec').change(function(){
+    var tipo = document.querySelector('#chec')
+    if(tipo.checked){
+      $('body').css('background', 'rgba(2, 7, 10, 0.931)')
+      $('body').css('color', 'white')
+      $('textarea').css('background','rgba(0, 0, 0, 0.831)')
+      $('textarea placeholder').css('color','white')
+      $('textarea').css('color','white')
+      $('table').css('color','white')
+    }
+
+    if(!tipo.checked){
+      $('body').css('background', 'rgba(235, 229, 229, 0.931)')
+      $('body').css('color', 'black')
+      $('textarea').css('background','white')
+      $('textarea placeholder').css('color','rgba(0, 0, 0, 0.7)')
+      $('textarea').css('color','black')
+      $('table').css('color','black')
+    }
+  })
     </script>
 </body>
 </html>

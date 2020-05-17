@@ -151,3 +151,66 @@ section .section-title {
     margin-bottom: 10px;
 }
 }
+
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+  }
+
+  .switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.63);
+    box-shadow: 0px 4px 12px rgba(12, 97, 122, 0.822);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before{
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    left: 4px;
+    bottom: 5px;
+    background-color: rgb(226, 16, 16);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider{
+    background-color: rgb(5, 5, 5);
+  }
+
+  input:focus + .slider{
+    box-shadow: 0px 4px 12px rgba(12, 97, 122, 0.822);
+  }
+
+  input:checked + .slider:before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(41px);
+    background-color: rgb(231, 21, 21);
+    box-shadow: 0px 4px 12px rgba(12, 97, 122, 0.822);
+  }
+
+  .slider.round{
+    border-radius: 34px;
+  }
+
+  .slider.round:before{
+    border-radius: 50%;
+  }
