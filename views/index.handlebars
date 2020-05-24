@@ -17,29 +17,23 @@
         font: bold 20px serif;
         transform: translate(-50%, -50%);
     }
+
 </style>
 <div id="app-5">
     <br>
     <h3 style="font: normal 4em Verdana;" class="mt-1">Manipulating Text</h3>
     <h4 class="mt-5" id='cabc'></h4><br><br><br>
-  <!--  <div class="row mt-5">
-        <div class="card bg-black mt-5" style="color: black;" >
-            <div class="card-body">
-        <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the Vue.js Framerwork, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
-            </div>
-        </div>
-    </div> --->
 
     <div class="card rounded mt-5" id='areadetexto' style="background: #CDC5BF !important;">
         <input style="display: block; margin-left: auto;" class="btn btn-warning btn-sm" id='copia' v-on:click="copy" type="button" value="Copy?">
         <textarea style="background-color: white;" class="form-control" v-model="texto" ref="texto" id="exampleFormControlTextarea1" rows="15" placeholder=" Enter your text here"></textarea>
         <div class="input-group mb-3">
             <input class="btn btn-dark" v-on:click="texto = texto.toUpperCase()" type="button" value="Uppercase">
-            <input class="btn btn-dark" v-on:click="texto = titleize()" type="button" value="1ª letter per word">
+            <input class="btn btn-dark" v-on:click="texto = titleize()" type="button" value="1st letter per word">
             <input class="btn btn-dark" v-on:click="texto = texto.toLowerCase()" type="button" value="Lowercase">
             <input class="btn btn-dark" v-on:click="texto = quebraPalavra()" type="button" value="Line break per word">
             <input class="btn btn-dark" v-on:click="reverseMessage" type="button" value="Invert text">
-            <input class="btn btn-dark" v-on:click="texto = fraseOne()" type="button" value="1ª letter per phrase">
+            <input class="btn btn-dark" v-on:click="texto = fraseOne()" type="button" value="1st letter per phrase">
             <input class="btn btn-dark" v-on:click="texto = espacamentoPalavra()" type="button" value="Word spacing">
             <input class="btn btn-dark" v-on:click="texto = semLinhaVazia()" type="button" value="No empty line">
             <input class="btn btn-dark" v-on:click="texto = semEspacoVazio()" type="button" value="No empty space">
@@ -50,122 +44,47 @@
     </div>
 </div>
 
-<!--- <div class="row">
-    <div class="card bg-black mt-3" style="color: black;" >
-        <div class="card-body">
-        <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the Vue.js Framerwork, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="card bg-black mt-3" style="color: black;" >
-        <div class="card-body">
-        <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the Vue.js Framerwork, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
-        </div>
-    </div>
-</div> --->
-
 <div class="container">
 <br class="mt-4" id="whatis">
 <br><br>
 <h3 class="mt-4">What is that?</h3>
 <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the <a style="color: chocolate;" href="https://vuejs.org/">Vue.js Framerwork</a>, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
+<p>The description of each feature with appropriate examples is present in the <a style="color: chocolate;" href="/options">options</a> tab. It is worth mentioning that given explanations aim to clarify doubts about such functionalities in the usability of the platform.</p>
 </div>
-
-<!--- <div class="row">
-<div class="card bg-black mt-3" style="color: black;" >
-    <div class="card-body">
-        <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the Vue.js Framerwork, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
-    </div>
-</div>
-</div> --->
 
 <div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h3 class="mt-4">Viewing modes</h3>
+            <p>For better viewing there are two modes available on the platform: normal and night.</p>
+            <p>The option is located in the menu at the top of the site.</p>
+                <figure class="col-md-12 col-sm-6">
+                    <img src="/img/23.png" class="mt-4" alt="Responsive image" style="border-radius:120px; border: 1px solid;">
+                    <img src="/img/24.png" class="mt-4" alt="Responsive image" style="border-radius:120px; border: 1px solid;">                        
+                </figure>
+        </div>
+        <div class="col-md-12">
+            <h4 class="mt-4">Page visual</h5>
+                <figure>
+                    <img src="/img/19.png" class="img-fluid mt-4" alt="Responsive image">
+                    <figcaption style="text-align: center;">Figure 1 -  normal mode</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="/img/20.png" class="img-fluid" alt="Responsive image">
+                    <figcaption style="text-align: center;">Figure 2 -  night mode</figcaption>
+                </figure>
+       </div>
+    </div>
+
+</div>
+
+<!--- <div class="container">
     <br class="mt-4" id="options">
     <br><br>
-    <h3 class="mt-4">Options</h3>
+    <h3 class="mt-4">Description</h3>
     <p>Given the due options with its functionalities, it was tried as much as possible to simplify the usability, so that its use becomes as easy and simple as possible for the visitor. Based on this premise, it may be that, when manipulating the text, you may not find the desired result. That is, the text still finds something to be changed or some flaws that can be corrected. <a style="color: chocolate;" href="/#footer">In this case, keep in touch with the developer</a> (contact in the footer).</p>
-</div>
-
-<!--- <div class="row">
-    <div class="card bg-black mt-3" style="color: black;" >
-        <div class="card-body">
-        <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the Vue.js Framerwork, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
-        </div>
-    </div>
-</div> --->
-
-<div class="container">
-    <br class="mt-4" id="definitions">
-    <br><br>
-    <h3 class="mt-4">Definitions</h3>
-    <p>Below is a table with a quick explanation that defines each text manipulation option on this platform.</p>
-    <table class="table table-striped">
-        <thead style="background: #CDC5BF !important;">
-            <tr>
-            <th scope="col">Option</th>
-            <th scope="col">Function</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">Uppercase</th>
-            <td>All text with uppercase letters.</td>
-            </tr>
-            <tr>
-            <th scope="row">1ª letter per word</th>
-            <td colspan="2">First letter of each word will be capitalized.</td>
-            </tr>
-            <tr>
-            <th scope="row">Lowercase</th>
-            <td colspan="3">All text with lowercase letters.</td>
-            </tr>
-            <tr>
-            <th scope="row">Line break per word</th>
-            <td colspan="4">With each word in the text, there will be a line break.</td>
-            </tr>
-            <tr>
-            <th scope="row">Line break per phrase</th>
-            <td colspan="5">With each phrase in the text, there will be a line break.</td>
-            </tr>
-            <tr>
-            <th scope="row">Invert text</th>
-            <td colspan="6">All text will be reversed backwards.</td>
-            </tr>
-            <tr>
-            <th scope="row">1ª letter per phrase</th>
-            <td colspan="7">Each sentence will have the first capital letter.</td>
-            </tr>
-            <tr>
-            <th scope="row">Word spacing</th>
-            <td colspan="8">All lines of lines that have no text are removed.</td>
-            </tr>
-            <tr>
-            <th scope="row">No empty line</th>
-            <td colspan="9">If you have two or more lines between each word / phrase, they will be removed.</td>
-            </tr>
-            <tr>
-            <th scope="row">No empty space</th>
-            <td colspan="10">If you have two or more spaces between each word / phrase, they will be removed.</td>
-            </tr>
-            <tr>
-            <th scope="row">No space</th>
-            <td colspan="11">All gaps are removed. Except after the period or continuity (.).</td>
-            </tr>
-            <th scope="row">Erase text</th>
-            <td colspan="11">Deletes all inserted text.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<!--- <div class="row">
-    <div class="card bg-black mt-3" style="color: black;" >
-        <div class="card-body">
-        <p>It's a online tool developed to assist in the manipulation of texts of easy use and great utility. The idealization of the tool from the context of the reactivity applied in the text input box, through the Vue.js Framerwork, is one of the points to be highlighted, since from that, we have, spontaneously, the result of each manipulation made in the inserted text.</p>
-        </div>
-    </div>
 </div> --->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

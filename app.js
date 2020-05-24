@@ -23,6 +23,19 @@
     app.get('/', (req, res) => {
         res.render('index')
     })
+
+    app.get('/options', (req, res) => {
+        res.render('options')
+    })
+
+    app.get('/options/page2', (req, res) => {
+        res.render('options2')
+    })
+
+    app.get('/options/page3', (req, res) => {
+        res.render('options3')
+    })
+
     app.get("/404", (req, res) => {
         res.send("Error 404!")
     })

@@ -70,6 +70,32 @@
 
     <script>
         $(document).ready(function(){
+            var modo = JSON.parse(localStorage.getItem('modo') || 'normal');
+
+            if(modo == 'noturno'){
+                document.querySelector('#chec').checked = true;
+                $('body').css('background', 'rgba(2, 7, 10, 0.931)')
+                $('body').css('color', 'white')
+                $('textarea').css('background','rgba(0, 0, 0, 0.831)')
+                $('textarea placeholder').css('color','white')
+                $('textarea').css('color','white')
+                $('table').css('color','white')
+                $('.voltar-ao-topo').css('background', 'black')
+                $('.rounded').css('background', '#8B7D7B')
+                $('.cbctable').css('color','black')
+            }else if(modo == 'normal'){
+                    $('body').css('background', 'rgba(235, 229, 229, 0.931)')
+                    $('body').css('color', 'black')
+                    $('textarea').css('background','white')
+                    $('textarea placeholder').css('color','rgba(0, 0, 0, 0.7)')
+                    $('textarea').css('color','black')
+                    $('table').css('color','black')
+                    $('.voltar-ao-topo').css('background', '#1E90FF')
+                    $('.rounded').css('background', '#CDC5BF')
+                    $('.cbctable').css('color','black')
+            }
+
+
             $('.voltar-ao-topo').fadeOut(200);
             // Exibe ou oculta o botão
             $(window).scroll(function() {
@@ -91,17 +117,20 @@
     $('#chec').change(function(){
     var tipo = document.querySelector('#chec')
     if(tipo.checked){
-      $('body').css('background', 'rgba(2, 7, 10, 0.931)')
-      $('body').css('color', 'white')
-      $('textarea').css('background','rgba(0, 0, 0, 0.831)')
-      $('textarea placeholder').css('color','white')
-      $('textarea').css('color','white')
-      $('table').css('color','white')
-      $('.voltar-ao-topo').css('background', 'black')
-      $('.rounded').css('background', '#8B7D7B')
+        localStorage.setItem("modo", JSON.stringify('noturno'));
+        $('body').css('background', 'rgba(2, 7, 10, 0.931)')
+        $('body').css('color', 'white')
+        $('textarea').css('background','rgba(0, 0, 0, 0.831)')
+        $('textarea placeholder').css('color','white')
+        $('textarea').css('color','white')
+        $('table').css('color','white')
+        $('.voltar-ao-topo').css('background', 'black')
+        $('.rounded').css('background', '#8B7D7B')
+        $('.cbctable').css('color','black')
     }
 
     if(!tipo.checked){
+      localStorage.setItem("modo", JSON.stringify('normal'));    
       $('body').css('background', 'rgba(235, 229, 229, 0.931)')
       $('body').css('color', 'black')
       $('textarea').css('background','white')
@@ -110,8 +139,14 @@
       $('table').css('color','black')
       $('.voltar-ao-topo').css('background', '#1E90FF')
       $('.rounded').css('background', '#CDC5BF')
+      $('.cbctable').css('color','black')
     }
   })
+
+    $('.img-fluid').click(function() =>{
+        $(this).css('height','150')
+        $(this).css('width', '150' )
+    })
     </script>
 </body>
 </html>
