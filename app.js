@@ -28,6 +28,11 @@
         res.render('options')
     })
 
+    app.get('/options/page1', (req, res) => {
+        res.redirect('/options')
+    })
+    
+
     app.get('/options/page2', (req, res) => {
         res.render('options2')
     })
