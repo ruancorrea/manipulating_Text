@@ -70,7 +70,15 @@
 
     <script>
         $(document).ready(function(){
+            $('.voltar-ao-topo').fadeOut(200);
             var modo = JSON.parse(localStorage.getItem('modo') || 'normal');
+
+             var tam = $(window).width();
+                if (tam >=750){
+                    $('#sumario').css('display', 'none')
+                }else{
+                    $('#sumario').css('display', 'inherit')
+                } 
 
             if(modo == 'noturno'){
                 document.querySelector('#chec').checked = true;
@@ -95,8 +103,6 @@
                     $('.cbctable').css('color','black')
             }
 
-
-            $('.voltar-ao-topo').fadeOut(200);
             // Exibe ou oculta o botão
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 200) {
@@ -143,10 +149,6 @@
     }
   })
 
-    $('.img-fluid').click(function() =>{
-        $(this).css('height','150')
-        $(this).css('width', '150' )
-    })
     </script>
 </body>
 </html>
