@@ -2,6 +2,9 @@
   <h1>Manipuling Text</h1>
   <h4>Online text editor and totally free.</h4>
   <h5><a href="http://manipulatingtext.herokuapp.com/" target="_blank">Link</a></h5>
+  <img src = "https://github.com/ruancorrea/manipulating_Text/blob/main/public/img/19.png?raw=true">
+   </img>
+  
 </header>
   
   <p>An easy-to-use platform with tools to manipulate texts.</p>
@@ -41,3 +44,6 @@
     <li>No space</li>
     <li>No line</li>
    </ul>
+   
+   <img src = "https://github.com/ruancorrea/manipulating_Text/blob/main/public/img/18.png?raw=true">
+   </img>
